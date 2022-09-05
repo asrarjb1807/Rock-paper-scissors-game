@@ -1,0 +1,57 @@
+import random
+
+print("!WELCOME TO YOUR ROCK PAPER SCISSORS GAME!\n\nType 0 for rock, 1 for paper and 2 for scissors\n")
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissor = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+ran = [rock, paper, scissor]
+
+choose = ran[int(input("please enter your choice : "))]
+ran1 = random.choice(ran)
+
+print("\nyou chose\n")
+print(choose)
+print("\ncomputer chose")
+print(ran1)
+
+if choose == ran1:
+    print("\nIts a draw!")
+
+elif choose == ran[0] and ran1 == ran[2]:
+    print("you won!")
+
+elif choose == ran[1] and ran1 == ran[0]:
+    print("you won!")
+
+elif choose == ran[2] and ran1 == ran[1]:
+    print("you won!")
+
+else:
+    print("you lost!")
+
+# (choose == ran[0] and ran1 == ran[1]) or (choose == ran[1] and ran1 == ran[0]) or (choose == ran[2] and ran1 == ran[1])
